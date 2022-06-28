@@ -1,0 +1,25 @@
+DataRead
+=========
+
+
+Packages
+--------
+We are using:
+
+NumPy <https://numpy.org/>
+
+OpenCv <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>
+
+math <https://docs.python.org/3/library/math.html>.
+
+Convertion to gray and masking
+------------------------------
+Image is converted to gray scale and then using OpenCv bitwise_and <https://docs.opencv.org/4.x/d0/d86/tutorial_py_image_arithmetics.html>,
+program show only points from certain gray scale.
+
+
+Coordinates of data points
+--------------------------
+Then remaining points coordinates are then saved using OpenCv findNonZero, but points
+close to axes are excluded.
+Then the rotated image is ploted with blue dotes in position of saved coordinates.

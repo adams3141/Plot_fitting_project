@@ -1,0 +1,40 @@
+.. Plot_Image_Fitter documentation master file, created by
+   sphinx-quickstart on Sun Jun 19 19:13:18 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Plot Image Fitter's technical documentation!
+
+========================================================
+**Plot Image Fitter** is a university project made by me (Adam Strach)
+and my friend Radosław Kluczewski. The resulting programme is meant to be
+able to rotate any plot image to its natural horizontal position and
+extract data points from an image. The code can be found on Github
+<https://github.com/FiFi-Python/Plot_fitting>
+
+.. note::
+
+   This project is just a basic version made for a university class.
+   Problems may occur while using it and fixes may not come, but you
+   are welcome to try to solve them, or notify us by writing to
+   Adam.strach@student.uj.edu.com
+
+
+
+
+
+.. toctree::
+   :caption: Table of Contents
+
+   Intrudoctory
+   Axislooker
+   Rotatebound
+   DataRead
+
+
+
+
+
+
+
+

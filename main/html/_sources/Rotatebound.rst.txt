@@ -1,0 +1,27 @@
+RotateBound
+==========
+
+
+Packages
+--------
+We are using:
+
+NumPy <https://numpy.org/>
+
+OpenCv <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>
+
+math <https://docs.python.org/3/library/math.html>.
+
+Find the cross point of the axes
+------------------------
+Using edge points of lines program determines if axes need rotation (check if one is vertical)
+ and finds crossing point of axes and angle of rotation.
+
+
+Rotation of image
+-----------------
+New width, height and center point are calculated. Finally using OpenCV
+getRotationMatrix2D  and warpAffine <https://docs.opencv.org/3.4/d4/d61/tutorial_warp_affine.html>
+rotation is made. Note that there are 4 possibilities of correct rotation each of them
+is tilted by multiplicity of 90 degres from another. Function returns array of four array
+each containing image and point of axes crossing after rotation.

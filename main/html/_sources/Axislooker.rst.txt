@@ -1,0 +1,31 @@
+Axis looker
+==========
+
+
+Packages
+--------
+We are using:
+
+NumPy <https://numpy.org/>
+
+OpenCv <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>
+
+math <https://docs.python.org/3/library/math.html>.
+
+HoughLinesP
+-----------
+The program load an iamge, then detects edges and convert it to a gray scale
+using cv2.Canny<https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html>.
+Then using OpenCv HoughLinesP <https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html>
+program detects and stores lines. (Note that program uses probabilistic Hough transform)
+For machine resources resons algoritm only work if HoughLinesP didn't detect
+too many lines. If this happend You may manually change treshold for detection
+in HoughLinesP or increase accepted number of lines.
+
+Search for perpendicular lines
+------------------------------
+In teh next step program checks the lines, looking for pair of perpendicular
+lines and simulanously chacking if the line isn't image boundary. The perpendicularity is
+checked using scalar product. Axes are chosen as longest (sum of lenghts of lines)
+perpendicular line pair. Then the lines with original image are forwarded to rotate bound.
+

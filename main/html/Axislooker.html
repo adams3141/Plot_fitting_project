@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Axis looker &#8212; Plot_Image_Fitter 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Introductory description" href="Intrudoctory.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="axis-looker">
+<h1>Axis looker<a class="headerlink" href="#axis-looker" title="Permalink to this heading">¶</a></h1>
+<section id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">¶</a></h2>
+<p>We are using:</p>
+<p>NumPy &lt;<a class="reference external" href="https://numpy.org/">https://numpy.org/</a>&gt;</p>
+<p>OpenCv &lt;<a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html</a>&gt;</p>
+<p>math &lt;<a class="reference external" href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a>&gt;.</p>
+</section>
+<section id="houghlinesp">
+<h2>HoughLinesP<a class="headerlink" href="#houghlinesp" title="Permalink to this heading">¶</a></h2>
+<p>The program load an iamge, then detects edges and convert it to a gray scale
+using cv2.Canny&lt;<a class="reference external" href="https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html">https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html</a>&gt;.
+Then using OpenCv HoughLinesP &lt;<a class="reference external" href="https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html">https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html</a>&gt;
+program detects and stores lines. (Note that program uses probabilistic Hough transform)
+For machine resources resons algoritm only work if HoughLinesP didn’t detect
+too many lines. If this happend You may manually change treshold for detection
+in HoughLinesP or increase accepted number of lines.</p>
+</section>
+<section id="search-for-perpendicular-lines">
+<h2>Search for perpendicular lines<a class="headerlink" href="#search-for-perpendicular-lines" title="Permalink to this heading">¶</a></h2>
+<p>In teh next step program checks the lines, looking for pair of perpendicular
+lines and simulanously chacking if the line isn’t image boundary. The perpendicularity is
+checked using scalar product. Axes are chosen as longest (sum of lenghts of lines)
+perpendicular line pair. Then the lines with original image are forwarded to rotate bound.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Plot_Image_Fitter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intrudoctory.html">Introductory description</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Axis looker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#houghlinesp">HoughLinesP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-for-perpendicular-lines">Search for perpendicular lines</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Intrudoctory.html" title="previous chapter">Introductory description</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Adam Strach.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Axislooker.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

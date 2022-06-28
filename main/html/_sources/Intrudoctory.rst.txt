@@ -1,0 +1,26 @@
+Introductory description
+========================
+
+The main program is Axis_looker.py with axillary rotate_bound.py. The secondary
+program for further analysis is data_read.py.
+
+**Axis_looker** takes as an argument path to an image and returns an array
+of four arrays each containing image, x coordinate of central point of
+the plot, y coordinate of centre of plot. The programme finds all lines
+(using Hough lines transformation) on the image and selects
+the longest perpendicular as an axis then propagates the image and found axes to
+rotate_bound which output of rotated images is then returned.
+
+**Rotate_bound** find crossing points of axes and angle of rotation from vertical
+-horizontal position. The crossing point of axes is a point around which the image
+is then rotated using an appropriate rotation matrix. Rotate_bound returns
+an array of four arrays containing rotated images and central points
+(with already rotated coordinates).
+
+**data_read** takes 3 arguments image, x and y coordinates of the crossing point
+of axes and returns image and coordinates of plot function points. Program converts copy of the image to grey scale then masks all points
+in specific grey scale (get rid of bright colour points). Then reads all
+remaining points position apart of points around axes. Later it dots
+the original image at all found points blue and then returns an array consisting
+of an image and a list of plot points.
+
