@@ -61,7 +61,9 @@ Coordinates of data points
 Then remaining points coordinates are then saved using OpenCv findNonZero, but points
 close to axes are excluded.
 Then the rotated image is ploted with blue dotes in position of saved coordinates.
-************************************************
+
+
+
 RotateBound
 ==========
 
@@ -90,7 +92,7 @@ rotation is made. Note that there are 4 possibilities of correct rotation each o
 is tilted by multiplicity of 90 degres from another. Function returns array of four array
 each containing image and point of axes crossing after rotation.
 
-*******************************************************************8
+
 Axis looker
 ==========
 
